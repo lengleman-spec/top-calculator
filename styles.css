@@ -7,6 +7,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 .button-container {
@@ -27,5 +28,21 @@ body {
 button {
   width: 100%;
   height: 70px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  background-color: lightslategray;
+  color: white;
+}
+
+.display {
+  grid-column: 1 / -1;
+  background-color: lightslategray;
+  color: white;
+  height: 80px;
+  font-size: 3rem;
+  border-radius: 10px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
