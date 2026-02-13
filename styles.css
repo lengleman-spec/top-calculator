@@ -41,6 +41,7 @@ button {
   height: 80px;
   font-size: 3rem;
   border-radius: 10px;
+  padding-right: 1rem;
   text-align: right;
   display: flex;
   justify-content: flex-end;
@@ -49,4 +50,8 @@ button {
 
 .operation {
   background-color: #ffa500;
+}
+
+.ac-button {
+  background-color: #ff4a4a;
 }
