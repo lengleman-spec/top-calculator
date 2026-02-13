@@ -1,14 +1,19 @@
-// Grabbing the display element:
-const display = document.getElementById("display");
-
-// Calculator state:
-let currentInput = "";
-let previousInput = "";
+// global variables:
+let currentNumber = "";
+let previousNumber = "";
 let operator = "";
 
-// Add a number or decimal
-function appendNumber(num) {
-  if (num === "." && currentInput.includes(".")) return;
-  currentInput += num;
-  display.textContent = currentInput;
+// Selectors
+const display = document.getElementById("display");
+
+const equal = document.querySelector(".equal");
+const decimal = document.querySelector(".decimal");
+const clear = document.querySelector(".clear");
+const numberButtons = document.querySelectorAll(".number");
+
+// Addition function
+function add(a, b) {
+  return a + b;
 }
+
+console.log(add(5, 3));
