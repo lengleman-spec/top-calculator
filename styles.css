@@ -46,3 +46,7 @@ button {
   justify-content: flex-end;
   align-items: center;
 }
+
+.operation {
+  background-color: #ffa500;
+}
