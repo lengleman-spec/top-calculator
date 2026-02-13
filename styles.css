@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 500px;
+  border: 3px solid black;
+  background-color: black;
+  gap: 1rem;
+}
+
+.button-zero {
+  grid-column: 1 / span 3;
+}
