@@ -100,7 +100,10 @@ equal.addEventListener("click", () => {
   const current = parseFloat(currentNumber);
 
   // Call operate() function:
-  const result = operate(operator, prev, current);
+  let result = operate(operator, prev, current);
+
+  // Round to 2 decimal points:
+  result = Math.round(result * 100) / 100;
 
   // Display the result:
   currentNumber = result.toString();
