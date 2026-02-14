@@ -87,9 +87,18 @@ equal.addEventListener("click", () => {
   // Convert from strings to numbers:
   const prev = parseFloat(previousNumber);
   const current = parseFloat(currentNumber);
-});
 
-// Math.round() to round the decimal
+  // Call operate() function:
+  const result = operate(operator, prev, current);
+
+  // Display the result:
+  currentNumber = result.toString();
+  updateDisplay();
+
+  // Reset previous and operator - but keep current:
+  previousNumber = "";
+  operator = "";
+});
 
 // Console Tests:
 console.log(add(5, 3));
