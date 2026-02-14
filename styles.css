@@ -48,10 +48,16 @@ button {
   align-items: center;
 }
 
-.operation {
+.operation,
+.decimal,
+.backspace {
   background-color: #ffa500;
 }
 
 .ac-button {
   background-color: #ff4a4a;
+}
+
+.equal {
+  background-color: green;
 }
