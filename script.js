@@ -36,12 +36,7 @@ function divide(a, b) {
 }
 
 // The DOM always gives you text as a string!!
-// Must use parseFloat to transform from a string to a number:
-function calculate() {
-  const prev = parseFloat(previousNumber);
-  const current = parseFloat(currentNumber);
-  return subtract(prev, current);
-}
+// Must use parseFloat to transform from a string to a number
 
 // Function to call other functions on the numbers:
 function operate(operator, a, b) {
