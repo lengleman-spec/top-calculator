@@ -21,12 +21,15 @@ function subtract(a, b) {
   return a - b;
 }
 
+// The DOM always gives you text as a string!!
 // Must use parseFloat to transform from a string to a number:
-const prev = parseFloat(previousNumber);
-const current = parseFloat(currentNumber);
-const result = subtract(prev, current);
+
+function calculate() {
+  const prev = parseFloat(previousNumber);
+  const current = parseFloat(currentNumber);
+  return subtract(prev, current);
+}
 
 // Console Tests:
 console.log(add(5, 3));
-console.log(subtract(3, 1));
 console.log(subtract(3, 1));
