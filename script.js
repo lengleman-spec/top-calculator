@@ -56,6 +56,7 @@ function operate(operator, a, b) {
   }
 }
 
+// Function to display:
 function updateDisplay() {
   display.textContent = currentNumber || "0";
 }
@@ -75,6 +76,17 @@ operationButtons.forEach((button) => {
     operator = button.textContent;
     currentNumber = "";
   });
+});
+
+equal.addEventListener("click", () => {
+  // Don't calculate if missing values:
+  if (currentNumber === "" || previousNumber === "") {
+    return;
+  }
+
+  // Convert from strings to numbers:
+  const prev = parseFloat(previousNumber);
+  const current = parseFloat(currentNumber);
 });
 
 // Math.round() to round the decimal
