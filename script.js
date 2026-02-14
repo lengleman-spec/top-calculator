@@ -28,6 +28,9 @@ function multiply(a, b) {
 
 // Division function:
 function divide(a, b) {
+  if (b === 0) {
+    return "Error";
+  }
   return a / b;
 }
 
@@ -43,3 +46,5 @@ function calculate() {
 console.log(add(5, 3));
 console.log(subtract(3, 1));
 console.log(multiply(3, 4));
+console.log(divide(3, 4));
+console.log(divide(3, 0));
