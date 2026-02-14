@@ -81,6 +81,14 @@ clear.addEventListener("click", () => {
   updateDisplay();
 });
 
+// Decimal button clicks:
+decimal.addEventListener("click", () => {
+  if (!currentNumber.includes(".")) {
+    currentNumber += ".";
+    updateDisplay();
+  }
+});
+
 equal.addEventListener("click", () => {
   // Don't calculate if missing values:
   if (currentNumber === "" || previousNumber === "") {
