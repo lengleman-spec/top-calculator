@@ -21,9 +21,18 @@ function subtract(a, b) {
   return a - b;
 }
 
+// Multiplication function:
+function multiply(a, b) {
+  return a * b;
+}
+
+// Division function:
+function divide(a, b) {
+  return a / b;
+}
+
 // The DOM always gives you text as a string!!
 // Must use parseFloat to transform from a string to a number:
-
 function calculate() {
   const prev = parseFloat(previousNumber);
   const current = parseFloat(currentNumber);
@@ -33,3 +42,4 @@ function calculate() {
 // Console Tests:
 console.log(add(5, 3));
 console.log(subtract(3, 1));
+console.log(multiply(3, 4));
