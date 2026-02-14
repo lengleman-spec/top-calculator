@@ -42,6 +42,19 @@ function calculate() {
   return subtract(prev, current);
 }
 
+// Function to choose which operator:
+function operate(operator, a, b) {
+  if (operator === "+") {
+    return add(a, b);
+  } else if (operator === "-") {
+    return subtract(a, b);
+  } else if (operator === "*") {
+    return multiply(a, b);
+  } else if (operator === "/") {
+    return divide(a, b);
+  }
+}
+
 // Console Tests:
 console.log(add(5, 3));
 console.log(subtract(3, 1));
