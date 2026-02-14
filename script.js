@@ -22,6 +22,11 @@ function subtract(a, b) {
 }
 
 // Must use parseFloat to transform from a string to a number:
+const prev = parseFloat(previousNumber);
+const current = parseFloat(currentNumber);
+const result = subtract(prev, current);
 
+// Console Tests:
 console.log(add(5, 3));
+console.log(subtract(3, 1));
 console.log(subtract(3, 1));
