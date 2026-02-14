@@ -11,6 +11,7 @@ const decimal = document.querySelector(".decimal");
 const clear = document.querySelector(".clear");
 const numberButtons = document.querySelectorAll(".number");
 const operationButtons = document.querySelectorAll(".operation");
+const backspace = document.querySelector(".backspace");
 
 // Addition function:
 function add(a, b) {
@@ -78,6 +79,13 @@ clear.addEventListener("click", () => {
   currentNumber = "";
   previousNumber = "";
   operator = "";
+  updateDisplay();
+});
+
+// C button clicks:
+backspace.addEventListener("click", () => {
+  // Remove last character of currentNumber w/ .slice()
+  currentNumber = currentNumber.slice(0, -1);
   updateDisplay();
 });
 
