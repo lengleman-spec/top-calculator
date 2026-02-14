@@ -78,6 +78,14 @@ operationButtons.forEach((button) => {
   });
 });
 
+// Handle clear button clicks:
+clear.addEventListener("click", () => {
+  currentNumber = "";
+  previousNumber = "";
+  operator = "";
+  updateDisplay();
+});
+
 equal.addEventListener("click", () => {
   // Don't calculate if missing values:
   if (currentNumber === "" || previousNumber === "") {
