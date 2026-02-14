@@ -10,6 +10,7 @@ const equal = document.querySelector(".equal");
 const decimal = document.querySelector(".decimal");
 const clear = document.querySelector(".clear");
 const numberButtons = document.querySelectorAll(".number");
+const operationButtons = document.querySelectorAll(".operation");
 
 // Addition function:
 function add(a, b) {
@@ -42,7 +43,7 @@ function calculate() {
   return subtract(prev, current);
 }
 
-// Function to choose which operator:
+// Function to call other functions on the numbers:
 function operate(operator, a, b) {
   if (operator === "+") {
     return add(a, b);
@@ -54,6 +55,29 @@ function operate(operator, a, b) {
     return divide(a, b);
   }
 }
+
+function updateDisplay() {
+  display.textContent = currentNumber || "0";
+}
+
+// Handle number button clicks:
+numberButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    currentNumber += button.textContent;
+    updateDisplay();
+  });
+});
+
+// Handle operator clicks:
+operationButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    previousNumber = currentNumber;
+    operator = button.textContent;
+    currentNumber = "";
+  });
+});
+
+// Math.round() to round the decimal
 
 // Console Tests:
 console.log(add(5, 3));
